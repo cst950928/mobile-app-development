@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Player"
+    android:background="@mipmap/bg">
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_pause"
+        android:drawableTint="@color/white"
+        android:drawableTop="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarLayout"
+        app:layout_constraintVertical_bias="0.5"/>
+
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_next"
+        android:drawableTint="@color/white"
+        android:drawableTop="@color/white"
+        android:layout_marginLeft="15dp"
+        app:layout_constraintStart_toEndOf="@+id/btnStart"
+        app:layout_constraintTop_toTopOf="@+id/btnStart"
+        app:layout_constraintBottom_toBottomOf="@+id/btnStart"
+        />
+
+    <Button
+        android:id="@+id/btnPrev"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_prev"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnStart"
+        app:layout_constraintTop_toTopOf="@+id/btnStart"
+        app:layout_constraintBottom_toBottomOf="@+id/btnStart"
+        />
+
+    <TextView
+        android:id="@+id/tv_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ChangeValue"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/tv_songName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No playing"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tv_change"
+
+        app:layout_constraintStart_toStartOf="@+id/tv_change"
+        app:layout_constraintTop_toBottomOf="@+id/tv_change"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current"
+        android:id="@+id/tv_hint"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tv_songName"
+        app:layout_constraintStart_toStartOf="@id/tv_songName"
+        app:layout_constraintEnd_toEndOf="@id/tv_songName"
+        android:layout_marginTop="30dp"/>
+
+
+    <com.gauravk.audiovisualizer.visualizer.BarVisualizer
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/blast"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        custom:avDensity="0.5"
+        custom:avType="outline"
+        custom:avWidth="4dp"
+        custom:avColor="#FF362E"
+        custom:avSpeed="normal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_songName"
+        custom:layout_constraintStart_toStartOf="@+id/tv_songName"
+        custom:layout_constraintEnd_toEndOf="@+id/tv_songName"
+        android:layout_marginTop="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/blast"
+        app:layout_constraintStart_toStartOf="@+id/blast"
+        app:layout_constraintTop_toBottomOf="@+id/blast"
+        android:layout_marginTop="30dp"
+        android:id="@+id/seekBarLayout">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:thumbTint="@color/white"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tvStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/seekBar"
+            android:text="0:00"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tvStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/seekBar"
+            android:text="0:00"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

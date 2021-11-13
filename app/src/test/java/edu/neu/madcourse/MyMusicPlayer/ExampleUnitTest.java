@@ -1,4 +1,4 @@
-package edu.neu.madcourse.music;
+package edu.neu.madcourse.MyMusicPlayer;
 
 import org.junit.Test;
 

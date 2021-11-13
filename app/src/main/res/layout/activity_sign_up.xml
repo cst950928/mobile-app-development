@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:id="@+id/SignUpParent"
+    android:background="@mipmap/bg">
+
+    <ImageView
+        android:id="@+id/imgBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"/>
+
+    <EditText
+        android:id="@+id/edtNameSignUp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="username"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBg"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notificationName"
+        android:text="Please enter a username"
+        android:textColor="@color/av_red"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/edtNameSignUp"
+        app:layout_constraintStart_toStartOf="@+id/edtNameSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/edtNameSignUp"/>
+
+    <EditText
+        android:id="@+id/edtEmailSignUp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="email..."
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/edtNameSignUp"
+        app:layout_constraintStart_toStartOf="@+id/edtNameSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/edtNameSignUp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notificationEmail"
+        android:text="Please enter a email"
+        android:textColor="@color/av_red"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailSignUp"
+        app:layout_constraintStart_toStartOf="@+id/edtEmailSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmailSignUp"/>
+
+    <EditText
+        android:id="@+id/edtPasswordSignUp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="password..."
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmailSignUp"
+        app:layout_constraintStart_toStartOf="@+id/edtEmailSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/edtEmailSignUp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notificationPassword"
+        android:text="Please enter the password"
+        android:textColor="@color/av_red"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordSignUp"
+        app:layout_constraintStart_toStartOf="@+id/edtPasswordSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/edtPasswordSignUp"/>
+
+    <EditText
+        android:id="@+id/edtRePasswordSignUp"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Re-enter password..."
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordSignUp"
+        app:layout_constraintStart_toStartOf="@+id/edtPasswordSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/edtPasswordSignUp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notificationRePassword"
+        android:text="Please enter the password"
+        android:textColor="@color/av_red"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@+id/edtRePasswordSignUp"
+        app:layout_constraintStart_toStartOf="@+id/edtRePasswordSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/edtRePasswordSignUp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/notificationPasswordMatch"
+        android:text="Please enter the password"
+        android:textColor="@color/av_red"
+        android:visibility="invisible"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@+id/edtRePasswordSignUp"
+        app:layout_constraintStart_toStartOf="@+id/edtRePasswordSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/edtRePasswordSignUp"/>
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Submit"
+        android:backgroundTint="@color/av_red"
+        android:fontFamily="@font/bevan"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/edtRePasswordSignUp"
+        app:layout_constraintStart_toStartOf="@+id/edtRePasswordSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/edtRePasswordSignUp" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

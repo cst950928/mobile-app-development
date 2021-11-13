@@ -1,4 +1,4 @@
-package edu.neu.madcourse.music;
+package edu.neu.madcourse.MyMusicPlayer;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("edu.neu.madcourse.music", appContext.getPackageName());
+        assertEquals("edu.neu.madcourse.musicplayer", appContext.getPackageName());
     }
 }
