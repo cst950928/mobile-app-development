@@ -1,0 +1,54 @@
+edu/neu/madcourse/MyMusicPlayer/OnlineItem.java
+ edu.neu.madcourse.MyMusicPlayer.OnlineItem
+edu/neu/madcourse/MyMusicPlayer/PlayerHolder.java
+ edu.neu.madcourse.MyMusicPlayer.PlayerHolder
+edu/neu/madcourse/MyMusicPlayer/BuildConfig.java
+ edu.neu.madcourse.MyMusicPlayer.BuildConfig
+edu/neu/madcourse/MyMusicPlayer/RandomPlay.java
+ edu.neu.madcourse.MyMusicPlayer.RandomPlay
+ edu.neu.madcourse.MyMusicPlayer.RandomPlay$1
+ edu.neu.madcourse.MyMusicPlayer.RandomPlay$1$1
+ edu.neu.madcourse.MyMusicPlayer.RandomPlay$1$2
+ edu.neu.madcourse.MyMusicPlayer.RandomPlay$1$2$1
+edu/neu/madcourse/MyMusicPlayer/MusicItem.java
+ edu.neu.madcourse.MyMusicPlayer.MusicItem
+edu/neu/madcourse/MyMusicPlayer/User.java
+ edu.neu.madcourse.MyMusicPlayer.User
+edu/neu/madcourse/MyMusicPlayer/LocalItem.java
+ edu.neu.madcourse.MyMusicPlayer.LocalItem
+edu/neu/madcourse/MyMusicPlayer/MainActivity.java
+ edu.neu.madcourse.MyMusicPlayer.MainActivity
+ edu.neu.madcourse.MyMusicPlayer.MainActivity$1
+edu/neu/madcourse/MyMusicPlayer/dao/FirebaseMessageDao.java
+ edu.neu.madcourse.MyMusicPlayer.dao.FirebaseMessageDao
+edu/neu/madcourse/MyMusicPlayer/SignUp.java
+ edu.neu.madcourse.MyMusicPlayer.SignUp
+ edu.neu.madcourse.MyMusicPlayer.SignUp$1
+edu/neu/madcourse/MyMusicPlayer/StoragePlayerAdaptor.java
+ edu.neu.madcourse.MyMusicPlayer.StoragePlayerAdaptor
+ edu.neu.madcourse.MyMusicPlayer.StoragePlayerAdaptor$1
+edu/neu/madcourse/MyMusicPlayer/Player.java
+ edu.neu.madcourse.MyMusicPlayer.Player
+ edu.neu.madcourse.MyMusicPlayer.Player$1
+ edu.neu.madcourse.MyMusicPlayer.Player$2
+ edu.neu.madcourse.MyMusicPlayer.Player$2$1
+ edu.neu.madcourse.MyMusicPlayer.Player$3
+ edu.neu.madcourse.MyMusicPlayer.Player$4
+ edu.neu.madcourse.MyMusicPlayer.Player$5
+ edu.neu.madcourse.MyMusicPlayer.Player$6
+ edu.neu.madcourse.MyMusicPlayer.Player$7
+ edu.neu.madcourse.MyMusicPlayer.Player$8
+edu/neu/madcourse/MyMusicPlayer/dao/MessageDao.java
+ edu.neu.madcourse.MyMusicPlayer.dao.MessageDao
+ edu.neu.madcourse.MyMusicPlayer.dao.MessageDao$1
+ edu.neu.madcourse.MyMusicPlayer.dao.MessageDao$2
+edu/neu/madcourse/MyMusicPlayer/PlayerAdaptor.java
+ edu.neu.madcourse.MyMusicPlayer.PlayerAdaptor
+ edu.neu.madcourse.MyMusicPlayer.PlayerAdaptor$1
+edu/neu/madcourse/MyMusicPlayer/PlayList.java
+ edu.neu.madcourse.MyMusicPlayer.PlayList
+ edu.neu.madcourse.MyMusicPlayer.PlayList$1
+ edu.neu.madcourse.MyMusicPlayer.PlayList$2
+ edu.neu.madcourse.MyMusicPlayer.PlayList$3
+edu/neu/madcourse/MyMusicPlayer/MyHomePage.java
+ edu.neu.madcourse.MyMusicPlayer.MyHomePage

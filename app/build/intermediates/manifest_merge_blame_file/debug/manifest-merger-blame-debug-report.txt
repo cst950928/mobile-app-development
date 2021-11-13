@@ -1,0 +1,211 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="edu.neu.madcourse.MyMusicPlayer"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:5:5-67
+11-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:6:5-81
+12-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:6:22-78
+13    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+13-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:7:5-80
+13-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:7:22-77
+14    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+14-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:8:5-82
+14-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:8:22-79
+15    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+15-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:9:5-70
+15-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:9:22-68
+16    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+16-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:10:5-79
+16-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:10:22-77
+17
+18    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+19    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->[com.google.firebase:firebase-storage:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/773b1eff15c8b6f77bc17bf53b62a785/transformed/jetified-firebase-storage-20.0.0/AndroidManifest.xml:26:5-79
+20-->[com.google.firebase:firebase-storage:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/773b1eff15c8b6f77bc17bf53b62a785/transformed/jetified-firebase-storage-20.0.0/AndroidManifest.xml:26:22-76
+21    <uses-permission android:name="android.permission.WAKE_LOCK" />
+21-->[com.google.android.gms:play-services-measurement-api:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/a230aedb0eafbed64be550638c77ed32/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:24:5-68
+21-->[com.google.android.gms:play-services-measurement-api:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/a230aedb0eafbed64be550638c77ed32/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:24:22-65
+22    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+22-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:26:5-110
+22-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:26:22-107
+23
+24    <application
+24-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:11:5-46:19
+25        android:allowBackup="true"
+25-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:12:9-35
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.5.0] /Users/xuewencui/.gradle/caches/transforms-3/1c82df0e58fbd0ba966b0ae0d34659c1/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+27        android:debuggable="true"
+28        android:extractNativeLibs="false"
+29        android:icon="@mipmap/ic_launcher"
+29-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:13:9-43
+30        android:label="@string/app_name"
+30-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:14:9-41
+31        android:roundIcon="@mipmap/ic_launcher_round"
+31-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:15:9-54
+32        android:supportsRtl="true"
+32-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:16:9-35
+33        android:testOnly="true"
+34        android:theme="@style/Theme.MusicPlayer" >
+34-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:17:9-49
+35        <activity
+35-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:18:9-20:39
+36            android:name="edu.neu.madcourse.MyMusicPlayer.RandomPlay"
+36-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:19:13-39
+37            android:exported="true" />
+37-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:20:13-36
+38        <activity
+38-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:21:9-23:39
+39            android:name="edu.neu.madcourse.MyMusicPlayer.SignUp"
+39-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:22:13-35
+40            android:exported="true" />
+40-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:23:13-36
+41        <activity
+41-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:24:9-26:39
+42            android:name="edu.neu.madcourse.MyMusicPlayer.PlayList"
+42-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:25:13-37
+43            android:exported="true" />
+43-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:26:13-36
+44        <activity
+44-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:27:9-29:39
+45            android:name="edu.neu.madcourse.MyMusicPlayer.Player"
+45-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:28:13-35
+46            android:exported="true" />
+46-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:29:13-36
+47        <activity
+47-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:30:9-32:39
+48            android:name="edu.neu.madcourse.MyMusicPlayer.MyHomePage"
+48-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:31:13-39
+49            android:exported="true" />
+49-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:32:13-36
+50        <activity
+50-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:33:9-41:20
+51            android:name="edu.neu.madcourse.MyMusicPlayer.MainActivity"
+51-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:34:13-41
+52            android:exported="true" >
+52-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:35:13-36
+53            <intent-filter>
+53-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:36:13-40:29
+54                <action android:name="android.intent.action.MAIN" />
+54-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:37:17-69
+54-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:37:25-66
+55
+56                <category android:name="android.intent.category.LAUNCHER" />
+56-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:39:17-77
+56-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:39:27-74
+57            </intent-filter>
+58        </activity>
+59
+60        <meta-data
+60-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:43:9-45:57
+61            android:name="preloaded_fonts"
+61-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:44:13-43
+62            android:resource="@array/preloaded_fonts" />
+62-->/Users/xuewencui/AndroidStudioProjects/MusicPlayer2/app/src/main/AndroidManifest.xml:45:13-54
+63
+64        <service
+64-->[com.google.firebase:firebase-storage:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/773b1eff15c8b6f77bc17bf53b62a785/transformed/jetified-firebase-storage-20.0.0/AndroidManifest.xml:30:9-36:19
+65            android:name="com.google.firebase.components.ComponentDiscoveryService"
+65-->[com.google.firebase:firebase-storage:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/773b1eff15c8b6f77bc17bf53b62a785/transformed/jetified-firebase-storage-20.0.0/AndroidManifest.xml:31:13-84
+66            android:directBootAware="true"
+66-->[com.google.firebase:firebase-common:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+67            android:exported="false" >
+67-->[com.google.firebase:firebase-storage:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/773b1eff15c8b6f77bc17bf53b62a785/transformed/jetified-firebase-storage-20.0.0/AndroidManifest.xml:32:13-37
+68            <meta-data
+68-->[com.google.firebase:firebase-storage:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/773b1eff15c8b6f77bc17bf53b62a785/transformed/jetified-firebase-storage-20.0.0/AndroidManifest.xml:33:13-35:85
+69                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+69-->[com.google.firebase:firebase-storage:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/773b1eff15c8b6f77bc17bf53b62a785/transformed/jetified-firebase-storage-20.0.0/AndroidManifest.xml:34:17-107
+70                android:value="com.google.firebase.components.ComponentRegistrar" />
+70-->[com.google.firebase:firebase-storage:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/773b1eff15c8b6f77bc17bf53b62a785/transformed/jetified-firebase-storage-20.0.0/AndroidManifest.xml:35:17-82
+71            <meta-data
+71-->[com.google.firebase:firebase-database:20.0.2] /Users/xuewencui/.gradle/caches/transforms-3/31a6a937917b778354272211aae1edba/transformed/jetified-firebase-database-20.0.2/AndroidManifest.xml:32:13-34:85
+72                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+72-->[com.google.firebase:firebase-database:20.0.2] /Users/xuewencui/.gradle/caches/transforms-3/31a6a937917b778354272211aae1edba/transformed/jetified-firebase-database-20.0.2/AndroidManifest.xml:33:17-109
+73                android:value="com.google.firebase.components.ComponentRegistrar" />
+73-->[com.google.firebase:firebase-database:20.0.2] /Users/xuewencui/.gradle/caches/transforms-3/31a6a937917b778354272211aae1edba/transformed/jetified-firebase-database-20.0.2/AndroidManifest.xml:34:17-82
+74            <meta-data
+74-->[com.google.android.gms:play-services-measurement-api:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/a230aedb0eafbed64be550638c77ed32/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:30:13-32:85
+75                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+75-->[com.google.android.gms:play-services-measurement-api:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/a230aedb0eafbed64be550638c77ed32/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:31:17-139
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[com.google.android.gms:play-services-measurement-api:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/a230aedb0eafbed64be550638c77ed32/transformed/jetified-play-services-measurement-api-20.0.0/AndroidManifest.xml:32:17-82
+77            <meta-data
+77-->[com.google.firebase:firebase-installations:17.0.0] /Users/xuewencui/.gradle/caches/transforms-3/045ee3e52baef22a6f354e1b63ce65b6/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
+78                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+78-->[com.google.firebase:firebase-installations:17.0.0] /Users/xuewencui/.gradle/caches/transforms-3/045ee3e52baef22a6f354e1b63ce65b6/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+79                android:value="com.google.firebase.components.ComponentRegistrar" />
+79-->[com.google.firebase:firebase-installations:17.0.0] /Users/xuewencui/.gradle/caches/transforms-3/045ee3e52baef22a6f354e1b63ce65b6/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
+80        </service>
+81
+82        <provider
+82-->[com.google.firebase:firebase-common:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+83            android:name="com.google.firebase.provider.FirebaseInitProvider"
+83-->[com.google.firebase:firebase-common:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+84            android:authorities="edu.neu.madcourse.MyMusicPlayer.firebaseinitprovider"
+84-->[com.google.firebase:firebase-common:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+85            android:directBootAware="true"
+85-->[com.google.firebase:firebase-common:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+86            android:exported="false"
+86-->[com.google.firebase:firebase-common:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+87            android:initOrder="100" />
+87-->[com.google.firebase:firebase-common:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/86e13b6ca81a6c901885b317cb2ca953/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+88
+89        <receiver
+89-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:29:9-33:20
+90            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+90-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:30:13-85
+91            android:enabled="true"
+91-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:31:13-35
+92            android:exported="false" >
+92-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:32:13-37
+93        </receiver>
+94
+95        <service
+95-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:35:9-38:40
+96            android:name="com.google.android.gms.measurement.AppMeasurementService"
+96-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:36:13-84
+97            android:enabled="true"
+97-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:37:13-35
+98            android:exported="false" />
+98-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:38:13-37
+99        <service
+99-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:39:9-43:72
+100            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+100-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:40:13-87
+101            android:enabled="true"
+101-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:41:13-35
+102            android:exported="false"
+102-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:42:13-37
+103            android:permission="android.permission.BIND_JOB_SERVICE" />
+103-->[com.google.android.gms:play-services-measurement:20.0.0] /Users/xuewencui/.gradle/caches/transforms-3/79b958ab390dac4bab91c520fe9c9fe3/transformed/jetified-play-services-measurement-20.0.0/AndroidManifest.xml:43:13-69
+104
+105        <activity
+105-->[com.google.android.gms:play-services-base:17.1.0] /Users/xuewencui/.gradle/caches/transforms-3/9917c1060ba2f79f3519a1b2bf642c2c/transformed/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+106            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+106-->[com.google.android.gms:play-services-base:17.1.0] /Users/xuewencui/.gradle/caches/transforms-3/9917c1060ba2f79f3519a1b2bf642c2c/transformed/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+107            android:exported="false"
+107-->[com.google.android.gms:play-services-base:17.1.0] /Users/xuewencui/.gradle/caches/transforms-3/9917c1060ba2f79f3519a1b2bf642c2c/transformed/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+108            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+108-->[com.google.android.gms:play-services-base:17.1.0] /Users/xuewencui/.gradle/caches/transforms-3/9917c1060ba2f79f3519a1b2bf642c2c/transformed/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+109
+110        <meta-data
+110-->[com.google.android.gms:play-services-basement:17.0.0] /Users/xuewencui/.gradle/caches/transforms-3/736795ced1125049463359fb87a935ed/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+111            android:name="com.google.android.gms.version"
+111-->[com.google.android.gms:play-services-basement:17.0.0] /Users/xuewencui/.gradle/caches/transforms-3/736795ced1125049463359fb87a935ed/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+112            android:value="@integer/google_play_services_version" />
+112-->[com.google.android.gms:play-services-basement:17.0.0] /Users/xuewencui/.gradle/caches/transforms-3/736795ced1125049463359fb87a935ed/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+113    </application>
+114
+115</manifest>
