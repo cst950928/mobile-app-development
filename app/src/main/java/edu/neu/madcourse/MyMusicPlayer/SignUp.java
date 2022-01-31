@@ -29,6 +29,10 @@ import edu.neu.madcourse.MyMusicPlayer.dao.MessageDao;
 
 //import edu.neu.madcourse.MyMusicPlayer.dao.MessageDao;
 
+/**
+ * Sign up page for new users
+ * Bind variable and
+ */
 public class SignUp extends AppCompatActivity implements View.OnClickListener{
     private static final String TAG = "SignUp";
     private Button btnSubmit;
@@ -36,6 +40,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
     private TextView tvName, tvEmail, tvPassword, tvRePassword, tvMatch;
     private ConstraintLayout parent;
 //    private MessageDao messageDao;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +70,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
                 tvRePassword.setVisibility(View.INVISIBLE);
                 tvMatch.setVisibility(View.INVISIBLE);
                 boolean canSubmit = true;
+                //check whether all fields have been filled
                 if (edtName.getText().toString().length() == 0) {
                     tvName.setVisibility(View.VISIBLE);
 //                    Log.d(TAG, "NAME");
@@ -84,12 +90,14 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
                     tvRePassword.setVisibility(View.VISIBLE);
                     canSubmit = false;
                 }
+                //check whether the password is the same
                 String pass = edtPassword.getText().toString(), rePass = edtRePassword.getText().toString();
                 if (pass.length() > 0 && rePass.length() > 0 && !pass.equals(rePass)) {
                     tvMatch.setVisibility(View.VISIBLE);
                     canSubmit = false;
                 }
 
+                //if all info is valid, push a new JSON node in Firebase
                 if (canSubmit) {
                     User newUser = new User(edtName.getText().toString(), edtEmail.getText().toString(), edtPassword.getText().toString());
                     DatabaseReference testReference =

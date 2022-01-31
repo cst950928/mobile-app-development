@@ -33,6 +33,9 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Play the music
+ */
 public class Player extends AppCompatActivity {
     private boolean isFireBase = false;
     private Button btnStart, btnNext, btnPrev;
@@ -52,6 +55,12 @@ public class Player extends AppCompatActivity {
     private boolean initialShake = false;
     private SeekBar seekBar;
     private double accelerationCurrentValueX, accelerationPrevValueX, accelerationCurrentValueY, accelerationPrevValueY, accelerationCurrentValueZ, accelerationPrevValueZ;
+
+    /**
+     * Initialize the sensor
+     * Determine the accelerate speed along x, y, z axis
+     * If the accelerate speed reach the threshold, trigger the switch action
+     */
     private SensorEventListener sensorEventListener = new SensorEventListener() {
         @Override
         public void onSensorChanged(SensorEvent sensorEvent) {
@@ -79,6 +88,12 @@ public class Player extends AppCompatActivity {
         }
     };
     Thread updateSeekbar;
+
+    /**
+     * Trigger the action of media player, shift music
+     * @param id flag of switching to previous or next song
+     * @param n total number of elements in the list
+     */
     private void shakeAction(int id, int n) {
         if (id == 1) {
             pos = (pos - 1 + n) % n;
@@ -102,6 +117,11 @@ public class Player extends AppCompatActivity {
         prepareMediaPlayer(filePath);
 
     }
+
+    /**
+     * Check whether the accelerate speed reach the threshold
+     * @return
+     */
     private int isAccelerationChange() {
         double changeAccelerationX = accelerationCurrentValueX - accelerationPrevValueX;
         double changeAccelerationY = accelerationCurrentValueY - accelerationPrevValueY;
@@ -116,8 +136,12 @@ public class Player extends AppCompatActivity {
             else return 2;
         }
         return 0;
-
     }
+
+    /**
+     * On the initialization stage, start playing music and set up the progress bar
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -167,6 +191,7 @@ public class Player extends AppCompatActivity {
                     try{
                         sleep(500);
                         currentPos = mediaPlayer.getCurrentPosition();
+                        //update the seekBar using currentPos of music
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -195,7 +220,9 @@ public class Player extends AppCompatActivity {
             }
         }, delay);
 
-
+        /*
+        Change the status according to current status
+         */
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -210,6 +237,9 @@ public class Player extends AppCompatActivity {
             }
         });
 
+        /*
+        Switch to next music
+         */
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -230,10 +260,12 @@ public class Player extends AppCompatActivity {
             }
         });
 
+        /*
+        Switch to previous music
+         */
         btnPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 mediaPlayer.stop();
                 mediaPlayer.release();
                 int n = items.size();
@@ -302,6 +334,7 @@ public class Player extends AppCompatActivity {
         animatorSet.playTogether(animator);
         animatorSet.start();
     }
+
     private String getTime(int currentPosition) {
         String res = "";
         int minute = currentPosition / 1000 / 60;
@@ -315,6 +348,10 @@ public class Player extends AppCompatActivity {
         return res;
     }
 
+    /**
+     * use filePath to set the data source of media player and set the onPrepared call back function
+     * @param filePath
+     */
     public void prepareMediaPlayer(String filePath) {
         try {
             tvSongName.setText(songName);
@@ -356,6 +393,7 @@ public class Player extends AppCompatActivity {
         });
         if (!updateSeekbar.isAlive()) updateSeekbar.start();
     }
+
     protected void onResume() {
         super.onResume();
         mSensorManager.registerListener(sensorEventListener, mAccelerometer, SensorManager.SENSOR_DELAY_NORMAL);
@@ -376,6 +414,12 @@ public class Player extends AppCompatActivity {
         }
     }
 
+    /**
+     * Update the accelerate speed using current value
+     * @param xNewAccel current x
+     * @param yNewAccel current y
+     * @param zNewAccel current z
+     */
     private void updateAccelParams(float xNewAccel, float yNewAccel, float zNewAccel) {
         if (firstUpdate) {
             firstUpdate = false;

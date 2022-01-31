@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.io.File;
 import java.util.ArrayList;
 
+/**
+ * Adaptor for recyclerview
+ */
 public class PlayerAdaptor extends RecyclerView.Adapter<PlayerHolder>{
     private Context context;
     private ArrayList<MusicItem> localItems;
@@ -21,6 +24,13 @@ public class PlayerAdaptor extends RecyclerView.Adapter<PlayerHolder>{
         this.localItems = localItems;
 //        this.items = items;
     }
+
+    /**
+     * Inflate layout for each item in recyclerview
+     * @param parent
+     * @param viewType
+     * @return
+     */
     @NonNull
     @Override
     public PlayerHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -29,6 +39,11 @@ public class PlayerAdaptor extends RecyclerView.Adapter<PlayerHolder>{
         return holder;
     }
 
+    /**
+     * Bind the position and data with each item in recyclerview
+     * @param holder
+     * @param position
+     */
     @Override
     public void onBindViewHolder(@NonNull PlayerHolder holder, int position) {
         MusicItem item = localItems.get(position);
@@ -44,6 +59,10 @@ public class PlayerAdaptor extends RecyclerView.Adapter<PlayerHolder>{
         });
     }
 
+    /**
+     * Get the number of items in current list
+     * @return
+     */
     @Override
     public int getItemCount() {
         return localItems.size();

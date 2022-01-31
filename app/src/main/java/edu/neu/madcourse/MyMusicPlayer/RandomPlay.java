@@ -21,6 +21,9 @@ import com.google.firebase.storage.StorageReference;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * On contrary with local files, RamdomPlay will get mp3 files in Firebase Storage
+ */
 public class RandomPlay extends AppCompatActivity implements View.OnClickListener{
 
     private MediaPlayer mediaPlayer;
@@ -29,6 +32,7 @@ public class RandomPlay extends AppCompatActivity implements View.OnClickListene
     private StoragePlayerAdaptor adaptor;
     private ArrayList<OnlineItem> localItems;
     private Handler handler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +46,11 @@ public class RandomPlay extends AppCompatActivity implements View.OnClickListene
 //        prepareMediaPlayer();
     }
 
+    /**
+     * Initialize recyclerview, including binding variable with view
+     * Set the adaptor and layout manager for the recyclerview
+     * Set the data for recyclerview
+     */
     public void createRecyclerView() {
         recyclerView = findViewById(R.id.recViewRandom);
         recyclerView.setHasFixedSize(true);
@@ -49,6 +58,9 @@ public class RandomPlay extends AppCompatActivity implements View.OnClickListene
         adaptor.notifyDataSetChanged();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        /*
+        Get Files on Firebase Storage
+         */
         StorageReference mStorageRef = FirebaseStorage.getInstance().getReference();
         mStorageRef.listAll().addOnSuccessListener(new OnSuccessListener<ListResult>() {
             @Override
@@ -57,11 +69,11 @@ public class RandomPlay extends AppCompatActivity implements View.OnClickListene
                     fileRef.getMetadata().addOnSuccessListener(new OnSuccessListener<StorageMetadata>() {
                         @Override
                         public void onSuccess(StorageMetadata storageMetadata) {
-                            String filename = storageMetadata.getName();
+                            String filename = storageMetadata.getName(); //get the filename of file in Storage
 
                             fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                                 @Override
-                                public void onSuccess(Uri uri) {
+                                public void onSuccess(Uri uri) { //call back: get filename and generate mp3 object
                                     OnlineItem onlineItem = new OnlineItem(filename, uri.toString());
                                     localItems.add(onlineItem);
                                     recyclerView.setAdapter(adaptor);

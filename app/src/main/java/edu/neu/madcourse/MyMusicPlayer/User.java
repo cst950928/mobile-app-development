@@ -3,6 +3,11 @@ package edu.neu.madcourse.MyMusicPlayer;
 
 import com.google.firebase.database.Exclude;
 
+/**
+ * User class
+ * include fields user info in Firebase Database: userName, email, password, key
+ * include getters, setters
+ */
 public class User {
 
     @Exclude
@@ -10,6 +15,10 @@ public class User {
     private String userName;
     private String email;
     private String password;
+
+    /**
+     * default constructor used to read the whole User object from Firebase Database
+     */
     public User() {
     }
 

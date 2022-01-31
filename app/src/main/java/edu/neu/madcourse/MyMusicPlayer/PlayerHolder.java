@@ -9,11 +9,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+/**
+ * Holder for recyclerview
+ * Bind the variable with view
+ */
 public class PlayerHolder extends RecyclerView.ViewHolder {
     public Context context;
     public Button btnPlay;
     public TextView tvTitle;
     public ImageView imgView;
+
     public PlayerHolder(@NonNull View itemView, Context context) {
         super(itemView);
         this.context = context;

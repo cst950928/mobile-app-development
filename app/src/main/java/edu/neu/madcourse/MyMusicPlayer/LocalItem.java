@@ -2,13 +2,24 @@ package edu.neu.madcourse.MyMusicPlayer;
 
 import java.io.File;
 
+/**
+ * Music files from local devices
+ */
 public class LocalItem implements MusicItem{
     private File file;
 
+    /**
+     * Constructor
+     * @param file the file path of local mp3 file
+     */
     public LocalItem(File file) {
         this.file = file;
     }
 
+    /**
+     * Getters and setters
+     * @return file object
+     */
     public File getFile() {
         return file;
     }

@@ -33,6 +33,7 @@ public class PlayList extends AppCompatActivity {
     private PlayerAdaptor adaptor;
     private ArrayList<MusicItem> localItems = new ArrayList<>();
     private boolean isVisible = true, initialList = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,10 @@ public class PlayList extends AppCompatActivity {
         btnList = findViewById(R.id.btnList);
         tvFileName = findViewById(R.id.tvFileName);
 
-
+        /*
+        1. get runtime permission of local storage
+        2. user could choose to display local mp3 files
+         */
         btnList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,7 +69,6 @@ public class PlayList extends AppCompatActivity {
             }
         });
 
-
         tvFileName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,6 +88,10 @@ public class PlayList extends AppCompatActivity {
         });
     }
 
+    /**
+     * use filePath to set the data source of media player and set the onPrepared call back function
+     * @param filePath
+     */
     public void prepareMediaPlayer(String filePath) {
         try {
             mediaPlayer.setDataSource(filePath);
@@ -101,6 +108,12 @@ public class PlayList extends AppCompatActivity {
         }
 
     }
+
+    /**
+     * get the permission from user
+     * if the permission has been granted, display recyclerview
+     * else request the permission
+     */
     public void runtimePermission() {
         if(Build.VERSION.SDK_INT >=Build.VERSION_CODES.M)
         {
@@ -117,6 +130,12 @@ public class PlayList extends AppCompatActivity {
     }
 
 
+    /**
+     * Automatically called by requestPermission method
+     * @param requestCode the target requestCode
+     * @param permissions a list of permissions
+     * @param grantResults a list of results
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -127,11 +146,16 @@ public class PlayList extends AppCompatActivity {
         }
     }
 
+    /**
+     * Initialize recyclerview, including binding variable with view
+     * set the adaptor and layout manager for the recyclerview
+     *
+     */
     public void createRecyclerView() {
         recyclerView = findViewById(R.id.recView);
         recyclerView.setHasFixedSize(true);
         adaptor = new PlayerAdaptor(PlayList.this, localItems);
-        adaptor.notifyDataSetChanged();
+        adaptor.notifyDataSetChanged(); //automatically update the dataset
 //        recyclerView.setAdapter(adaptor);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -141,6 +165,11 @@ public class PlayList extends AppCompatActivity {
         adaptor.notifyItemInserted(position);
     }
 
+    /**
+     * Get all mp3 files in local path
+     * @param file
+     * @return
+     */
     public ArrayList<File> findSong(File file){
         ArrayList<File> arr = new ArrayList<>();
         File[] f = file.listFiles();
@@ -158,6 +187,10 @@ public class PlayList extends AppCompatActivity {
         return arr;
     }
 
+    /**
+     * Set data for the recyclerview
+     * @return
+     */
     public void displaySongs() {
 //        Environment.getExternalStorageDirectory()
         File file = new File(FILE_PATH);

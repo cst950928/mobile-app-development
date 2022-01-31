@@ -30,6 +30,9 @@ import edu.neu.madcourse.MyMusicPlayer.dao.MessageDao;
 //import edu.neu.madcourse.MyMusicPlayer.dao.FirebaseMessageDao;
 //import edu.neu.madcourse.MyMusicPlayer.dao.MessageDao;
 
+/**
+ * Log in and Sign in Page
+ */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btnSignIn, btnSignUp;
     private MessageDao messageDao;
@@ -47,14 +50,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSignIn.setOnClickListener(this::onClick);
         btnSignUp.setOnClickListener(this::onClick);
         messageDao = new FirebaseMessageDao();
-//
-
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btnSignUp:
+            case R.id.btnSignUp:  //switch to sign up page
                 Intent intentSignUp = new Intent(MainActivity.this, SignUp.class);
                 startActivity(intentSignUp);
                 break;
@@ -62,17 +63,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                Intent intentHome = new Intent(MainActivity.this, SignUp.class);
 //                startActivity(intentHome);
 //                break;
-            default:
+            default:  //check the input information
 //                Intent intentHome = new Intent(MainActivity.this, MyHomePage.class);
 //                startActivity(intentHome);
+
+                //get the name of database
                 DatabaseReference testReference =
                         FirebaseDatabase.getInstance()
                                 .getReference(User.class.getSimpleName());
+                //find the data with userName equal to input field
                 Query query = testReference.orderByChild("userName").equalTo(edtName.getText().toString());
 
                 query.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        //if has the matched username, check email
                         if(dataSnapshot.getChildrenCount() > 0) {
                             for (DataSnapshot user: dataSnapshot.getChildren()) {
                                 User u = user.getValue(User.class);

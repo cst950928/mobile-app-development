@@ -28,11 +28,11 @@ public class MyHomePage extends AppCompatActivity implements View.OnClickListene
 //                Intent intentAdd = new Intent(Homepage.this, AddMusic.class);
 //                startActivity(intentAdd);
 //                break;
-            case R.id.btnPlayList:
+            case R.id.btnPlayList: //switch to the page where show files from local device
                 Intent intentPlayList = new Intent(MyHomePage.this, PlayList.class);
                 startActivity(intentPlayList);
                 break;
-            case R.id.btnRandomPlay:
+            case R.id.btnRandomPlay: //switch to the page where show files from Firebase Storage
                 Intent intentRandom = new Intent(MyHomePage.this, RandomPlay.class);
                 startActivity(intentRandom);
             default:
